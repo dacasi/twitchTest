@@ -31,32 +31,32 @@ namespace WpfApp1
             InitializeComponent();
         }
 
-        public void OnConnected(object sender, OnConnectedArgs e)
+        public void TwitchConnected(OnConnectedArgs e)
         {
             AppendText($"Connected to Channel: {e.AutoJoinChannel}");
         }
 
-        public void OnJoinedChannel(object sender, OnJoinedChannelArgs e)
+        public void TwitchJoinedChannel(OnJoinedChannelArgs e)
         {
             AppendText($"Joined Channel: {e.Channel}");
         }
 
-        public void OnMessageReceived(object sender, OnMessageReceivedArgs e)
+        public void TwitchMessageReceived(OnMessageReceivedArgs e)
         {
             AppendText($"Message Received: {e.ChatMessage.Message}");
         }
 
-        public void OnNewSubscriber(object sender, OnNewSubscriberArgs e)
+        public void TwitchNewSubscriber(OnNewSubscriberArgs e)
         {
             AppendText($"New Subscriber {e.Subscriber.UserId}"); 
         }
 
-        public void OnWhisperReceived(object sender, OnWhisperReceivedArgs e)
+        public void TwitchWhisperReceived(OnWhisperReceivedArgs e)
         {
             AppendText($"Wisper Received: {e.WhisperMessage.Message}");
         }
 
-        public void OnError(Exception ex)
+        public void TwitchError(Exception ex)
         {
             AppendText($"ERROR" + Environment.NewLine + ex.ToString());
         }

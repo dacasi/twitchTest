@@ -37,33 +37,33 @@ namespace WpfApp1
             }
             catch(Exception ex)
             {
-                _handler.OnError(ex);
+                _handler.TwitchError(ex);
             }
         }
 
         private void OnNewSubscriber(object sender, OnNewSubscriberArgs e)
         {
-            _handler.OnNewSubscriber(sender, e);
+            _handler.TwitchNewSubscriber(e);
         }
 
         private void OnWhisperReceived(object sender, OnWhisperReceivedArgs e)
         {
-            _handler.OnWhisperReceived(sender, e);
+            _handler.TwitchWhisperReceived(e);
         }
 
         private void OnMessageReceived(object sender, OnMessageReceivedArgs e)
         {
-            _handler.OnMessageReceived(sender, e);
+            _handler.TwitchMessageReceived(e);
         }
 
         private void OnJoinedChannel(object sender, OnJoinedChannelArgs e)
         {
-            _handler.OnJoinedChannel(sender, e);
+            _handler.TwitchJoinedChannel(e);
         }
 
         private void OnConnected(object sender, OnConnectedArgs e)
         {
-            _handler.OnConnected(sender, e);
+            _handler.TwitchConnected(e);
         }
 
         public void Dispose()

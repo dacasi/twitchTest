@@ -9,16 +9,16 @@ namespace WpfApp1
 {
     public interface IBobbleBotHandler
     {
-        void OnError(Exception ex);
+        void TwitchError(Exception ex);
 
-        void OnNewSubscriber(object sender, OnNewSubscriberArgs e);
+        void TwitchNewSubscriber(OnNewSubscriberArgs e);
 
-        void OnWhisperReceived(object sender, OnWhisperReceivedArgs e);
+        void TwitchWhisperReceived(OnWhisperReceivedArgs e);
 
-        void OnMessageReceived(object sender, OnMessageReceivedArgs e);
+        void TwitchMessageReceived(OnMessageReceivedArgs e);
 
-        void OnJoinedChannel(object sender, OnJoinedChannelArgs e);
+        void TwitchJoinedChannel(OnJoinedChannelArgs e);
 
-        void OnConnected(object sender, OnConnectedArgs e);
+        void TwitchConnected(OnConnectedArgs e);
     }
 }
